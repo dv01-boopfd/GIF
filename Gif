@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Убираем всё лишнее, чтобы был виден только оверлей */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: transparent;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        video {
+            /* Видео будет занимать всю область оверлея */
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Видео заполнит контейнер без черных полос */
+            
+            /* Минималистичный стиль: закругление и мягкая тень */
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <video autoplay loop muted playsinline>
+            <source src="https://files.catbox.moe/tlye97.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+    </div>
+
+</body>
+</html>
