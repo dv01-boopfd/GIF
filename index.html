@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Убираем всё лишнее, чтобы был виден только оверлей */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: transparent;
+            /* Центрируем контейнер с видео по центру экрана */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-wrapper {
+            /* Задаем размеры контейнера. Видео будет вписано в него. */
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            /* Поворачиваем весь контейнер с видео на 270 градусов */
+            transform: rotate(270deg);
+            transform-origin: center center; /* Точка поворота — центр */
+        }
+
+        video {
+            /* Видео будет занимать всё место в контейнере после поворота */
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Заполняет контейнер, обрезая лишнее */
+            
+            /* Твои стили (углы и тень) */
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-wrapper">
+        <!-- Твое видео -->
+        <video autoplay loop muted playsinline>
+            <source src="https://files.catbox.moe/tlye97.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+    </div>
+
+</body>
+</html>
